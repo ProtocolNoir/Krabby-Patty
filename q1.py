@@ -23,6 +23,11 @@ d1 = d.copy()
 flag = 0
 for a in freq:
     t = tempdict[a]
+    if t == 1:
+        for a,b in d1.items():
+            print(a,b, end=' ')
+        print(" ")
+        continue
     check = 0
     for i,j in d.items():
         if j == a and flag == 0:
