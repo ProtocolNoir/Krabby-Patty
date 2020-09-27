@@ -7,4 +7,10 @@ for a in range(1,n+1):
 print(array_sparse)
 
 array_big = np.zeros((r,c), int)
+
+array_sparse_temp = array_sparse[1:,:]
+for a in array_sparse_temp:
+    tr,tc,tn = a[0],a[1],a[2]
+    array_big[tr][tc] = tn
 print(array_big)
+del array_sparse_temp
